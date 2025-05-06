@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lomig - Settings</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">Lomig</div>
+            <div class="user-section">
+                <div class="profile-container">
+                    <img id="profile-pic" src="https://ui-avatars.com/api/?name=User&background=random" alt="Profile">
+                    <span id="user-name">User</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Settings</h1>
+            <div class="content">
+                <div class="settings-section">
+                    <h2>Profile</h2>
+                    <div id="error-message" class="error-message"></div>
+                    <div id="success-message" class="success-message"></div>
+                    
+                    <div class="profile-upload">
+                        <div class="profile-image-container">
+                            <img id="profile-preview" src="https://ui-avatars.com/api/?name=User&background=random" alt="Profile Preview">
+                            <div class="upload-overlay">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                        </div>
+                        <input type="file" id="profile-upload" accept="image/*" style="display: none;">
+                        <button id="upload-btn" class="btn-small">Change Photo</button>
+                    </div>
+                    
+                    <form id="profile-form">
+                        <div class="form-group">
+                            <label for="display-name">Display Name</label>
+                            <input type="text" id="display-name" required>
+                        </div>
+                        <button type="submit" class="btn">Save Changes</button>
+                    </form>
+                </div>
+                
+                <div class="settings-section">
+                    <h2>Account</h2>
+                    <button id="logout-btn" class="btn-danger">Logout</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-nav">
+        <div class="nav-item" data-page="main.html">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </div>
+        <div class="nav-item" data-page="joined-matches.html">
+            <i class="fas fa-gamepad"></i>
+            <span>Joined</span>
+        </div>
+        <div class="nav-item" data-page="results.html">
+            <i class="fas fa-trophy"></i>
+            <span>Results</span>
+        </div>
+        <div class="nav-item active" data-page="settings.html">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK with privacy attributes -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js" referrerpolicy="no-referrer" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js" referrerpolicy="no-referrer" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js" referrerpolicy="no-referrer" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js" referrerpolicy="no-referrer" crossorigin="anonymous"></script>
+    
+    <script src="firebase-config.js"></script>
+    <script src="settings.js"></script>
+    <script src="navigation.js"></script>
+</body>
+</html> 
